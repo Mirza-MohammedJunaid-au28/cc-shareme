@@ -1,0 +1,27 @@
+<%- include ("includes/header") %>
+
+<div id="homeApp" style="margin-bottom: 80px;">
+    <div class="container" id="features">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 style="font-size: 10rem;">Share Me</h1>
+                <p style="font-size: 2rem;">Share Your File in few seconds</p>
+
+                <a v-bind:href="mainURL + '/MyUploads'">Get Started</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const homeApp = Vue.createApp({
+        data() {
+            return {
+                mainURL: baseUrl,
+            }
+        }
+    });
+    homeApp.mount("#homeApp");
+</script>
+
+<%- include ("includes/footer") %>
